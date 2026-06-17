@@ -1,3 +1,15 @@
 {
-    "MODULE.hello": "hello"
+  "ANIM": {
+    "controls": {},
+    "tooltips": {
+      "ping": {
+        "assist-me": "Assist Me",
+        "danger": "Danger",
+        "default": "Default",
+        "on-my-way": "On My Way",
+        "investigate": "Investigate",
+        "question": "Question Mark"
+      }
+    }
+  }
 }

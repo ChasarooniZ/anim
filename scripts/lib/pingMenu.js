@@ -1,19 +1,4 @@
-import { PINGS } from "../const.js";
-const DEFAULT_PINGS = [
-  {
-    id: "default",
-    icon: "modules/game-icons-net/whitetransparent/position-marker.svg",
-  },
-  { id: "danger", icon: "icons/svg/hazard.svg" },
-  {
-    id: "question",
-    icon: "modules/game-icons-net/whitetransparent/uncertainty.svg",
-  },
-  {
-    id: "question",
-    icon: "modules/game-icons-net/whitetransparent/uncertainty.svg",
-  },
-];
+import { DEFAULT_PINGS, PINGS } from "../const.js";
 export function openPingMenu(pings = DEFAULT_PINGS) {
   document.getElementById("radial-ping-menu")?.remove();
 
@@ -25,7 +10,8 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
   <g transform="translate(${center},${center}) rotate(45) translate(-${center},-${center})">
 
     <!-- Up -->
-    <g class="segment" data-pos="${pings[0].id}" transform="translate(${center},${center})">
+    <g class="segment" data-pos="${pings[0].id}"
+        data-tooltip="${pings[0].id}" data-tooltip-direction="UP" transform="translate(${center},${center})">
       <path d="M0,0 L-${radius},0 A${radius},${radius} 0 0,1 0,-${radius} Z" 
             fill="#96CEB4" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[0].icon}"

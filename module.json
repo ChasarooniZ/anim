@@ -1,7 +1,7 @@
 {
   "id": "anim",
-  "title": "ANIM: Agnostic Animation Stuff",
-  "description": "",
+  "title": "ANIM: Agnostic Animation Things",
+  "description": "Just some misc agnostic animations, adds implementation to animations from GENGA, and will split off some from pf2e rpg numbers.",
   "version": "#{VERSION}#",
   "library": "false",
   "compatibility": {
