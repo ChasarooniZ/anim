@@ -1,6 +1,11 @@
 {
-  "ANIM": {
-    "controls": {},
+  "anim": {
+    "controls": {
+      "ping": {
+        "name": "Open Ping Menu",
+        "hint": "Opens the ping menu where you can select what you want to ping"
+      }
+    },
     "tooltips": {
       "ping": {
         "assist-me": "Assist Me",

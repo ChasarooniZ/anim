@@ -5,7 +5,7 @@
   "version": "#{VERSION}#",
   "library": "false",
   "compatibility": {
-    "minimum": 14,
+    "minimum": 13,
     "verified": 14
   },
   "authors": [
@@ -15,7 +15,17 @@
   ],
   "relationships": {
     "systems": [],
-    "requires": []
+    "requires": [
+      {
+        "id": "genga",
+        "type": "module",
+        "manifest": "https://github.com/ChasarooniZ/anime-agnostic-animations/releases/latest/download/module.json",
+        "compatibility": {
+          "minimum": "1.0.2",
+          "verified": "1.0.2"
+        }
+      }
+    ]
   },
   "esmodules": ["scripts/module.js"],
   "scripts": ["scripts/lib/lib.js"],

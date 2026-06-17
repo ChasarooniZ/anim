@@ -20,7 +20,8 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
 
     <!-- Up -->
     <g class="segment" data-pos="${pings[0].id}"
-        data-tooltip="${pings[0].id}" data-tooltip-direction="UP" transform="translate(${center},${center})">
+        data-tooltip="${game.i18n.localize(`anim.tooltips.ping.${pings[0].id}`)}"
+        data-tooltip-direction="UP" transform="translate(${center},${center})">
       <path d="M0,0 L-${radius},0 A${radius},${radius} 0 0,1 0,-${radius} Z" 
             fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[0].icon}"
@@ -30,7 +31,9 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
     </g>
 
         <!-- Left -->
-    <g class="segment" data-pos="${pings[1].id}" transform="translate(${center},${center})">
+    <g class="segment" data-pos="${pings[1].id}"
+        data-tooltip="${game.i18n.localize(`anim.tooltips.ping.${pings[1].id}`)}"
+        data-tooltip-direction="LEFT" transform="translate(${center},${center})">
       <path d="M0,0 L0,${radius} A${radius},${radius} 0 0,1 -${radius},0 Z" 
             fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[1].icon}"
@@ -40,7 +43,9 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
     </g>
 
     <!-- Right -->
-    <g class="segment" data-pos="${pings[2].id}" transform="translate(${center},${center})">
+    <g class="segment" data-pos="${pings[2].id}"
+        data-tooltip="${game.i18n.localize(`anim.tooltips.ping.${pings[2].id}`)}"
+        data-tooltip-direction="RIGHT" transform="translate(${center},${center})">
       <path d="M0,0 L0,-${radius} A${radius},${radius} 0 0,1 ${radius},0 Z" 
             fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[2].icon}"
@@ -50,17 +55,21 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
     </g>
     
     <!-- Down -->
-    <g class="segment" data-pos="${pings[3].id}" transform="translate(${center},${center})">
+    <g class="segment" data-pos="${pings[3].id}"
+        data-tooltip="${game.i18n.localize(`anim.tooltips.ping.${pings[3].id}`)}"
+        data-tooltip-direction="DOWN" transform="translate(${center},${center})">
       <path d="M${radius},0 A${radius},${radius} 0 0,1 0,${radius} L0,0 Z" 
             fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
-      <image href="${pings[3].icon}"
+      <image href="${pings[3].icon}"h
              x="${imgOffset * 0.5 - imgSize / 2}" y="${imgOffset * 0.5 - imgSize / 2}"
              width="${imgSize}" height="${imgSize}"
              transform="rotate(-45, ${imgOffset * 0.5}, ${imgOffset * 0.5})"/>
     </g>
     
     <!-- Center circle -->
-    <circle cx="${center}" cy="${center}" r="${centerRadius}" fill="${borderColor}"/>
+    <circle class="default"
+        data-tooltip="${game.i18n.localize(`anim.tooltips.ping.default`)}"
+        data-tooltip-direction="UP" cx="${center}" cy="${center}" r="${centerRadius}" fill="${borderColor}"/>
   </g>
 </svg>`;
 

@@ -1,4 +1,4 @@
-export const MODULE_ID = "ANIM";
+export const MODULE_ID = "anim";
 export const PINGS = {
   "assist-me": {
     icon: "modules/anim/assets/art/pings/assist-me.svg",

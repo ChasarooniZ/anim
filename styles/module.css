@@ -9,4 +9,8 @@
       fill: #745479;
     }
   }
+
+  circle.default:hover {
+    fill: #745479;
+  }
 }
