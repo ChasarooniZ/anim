@@ -11,7 +11,7 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
   const bgColor = "#302831";
   document.getElementById("radial-ping-menu")?.remove();
 
-  const mousePos = canvas.mousePosition;
+  const mousePos = { x: canvas.mousePosition.x, y: canvas.mousePosition.y };
   window.animPingPosition = mousePos;
   const screenPos = canvas.stage.worldTransform.apply(mousePos);
 
