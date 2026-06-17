@@ -7,7 +7,8 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
   const imgSize = radius * 0.5;
   const imgOffset = radius * 0.8; // distance from center to image center
 
-  const borderColor = "#333";
+  const borderColor = "#6e6e6eff";
+  const bgColor = "#302831";
   document.getElementById("radial-ping-menu")?.remove();
 
   const mousePos = canvas.mousePosition;
@@ -21,7 +22,7 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
     <g class="segment" data-pos="${pings[0].id}"
         data-tooltip="${pings[0].id}" data-tooltip-direction="UP" transform="translate(${center},${center})">
       <path d="M0,0 L-${radius},0 A${radius},${radius} 0 0,1 0,-${radius} Z" 
-            fill="#302831" stroke="${borderColor}" stroke-width="2"/>
+            fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[0].icon}"
              x="${-imgOffset * 0.5 - imgSize / 2}" y="${-imgOffset * 0.5 - imgSize / 2}"
              width="${imgSize}" height="${imgSize}"
@@ -31,7 +32,7 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
         <!-- Left -->
     <g class="segment" data-pos="${pings[1].id}" transform="translate(${center},${center})">
       <path d="M0,0 L0,${radius} A${radius},${radius} 0 0,1 -${radius},0 Z" 
-            fill="#302831" stroke="${borderColor}" stroke-width="2"/>
+            fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[1].icon}"
              x="${-imgOffset * 0.5 - imgSize / 2}" y="${imgOffset * 0.5 - imgSize / 2}"
              width="${imgSize}" height="${imgSize}"
@@ -41,7 +42,7 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
     <!-- Right -->
     <g class="segment" data-pos="${pings[2].id}" transform="translate(${center},${center})">
       <path d="M0,0 L0,-${radius} A${radius},${radius} 0 0,1 ${radius},0 Z" 
-            fill="#302831" stroke="${borderColor}" stroke-width="2"/>
+            fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[2].icon}"
              x="${imgOffset * 0.5 - imgSize / 2}" y="${-imgOffset * 0.5 - imgSize / 2}"
              width="${imgSize}" height="${imgSize}"
@@ -51,7 +52,7 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
     <!-- Down -->
     <g class="segment" data-pos="${pings[3].id}" transform="translate(${center},${center})">
       <path d="M${radius},0 A${radius},${radius} 0 0,1 0,${radius} L0,0 Z" 
-            fill="#302831" stroke="${borderColor}" stroke-width="2"/>
+            fill="${bgColor}" stroke="${borderColor}" stroke-width="2"/>
       <image href="${pings[3].icon}"
              x="${imgOffset * 0.5 - imgSize / 2}" y="${imgOffset * 0.5 - imgSize / 2}"
              width="${imgSize}" height="${imgSize}"
@@ -113,7 +114,6 @@ function pingAnimation(type) {
     .anchor(pingInfo.anchor)
     .name(name)
     .atLocation(mousePos)
-    .tint(pingInfo.color)
     .duration(3000)
     .fadeIn(500, { ease: "easeOutQuart" })
     .scaleIn(0.5, 500, { ease: "easeOutQuad" })
@@ -122,7 +122,6 @@ function pingAnimation(type) {
     .xray()
     .aboveInterface()
     .size(1, { gridUnits: true })
-    .filter("Glow", { distance: 5, color: 0x000, quality: 0.1 })
     .sound()
     .file(pingInfo.sfx)
     .volume(volume)
