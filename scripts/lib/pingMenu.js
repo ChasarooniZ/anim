@@ -12,9 +12,8 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
   document.getElementById("radial-ping-menu")?.remove();
 
   const mousePos = canvas.mousePosition;
+  window.animPingPosition = mousePos;
   const screenPos = canvas.stage.worldTransform.apply(mousePos);
-
-  window.animPingPosition = screenPos;
 
   const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}">
@@ -131,7 +130,7 @@ function pingAnimation(type) {
     .fadeOut(250)
     .scaleOut(0.5, 250, { ease: "easeOutQuad" })
     .xray()
-    .aboveInterface()
+    .aboveLighting()
     .size(1, { gridUnits: true })
     .sound()
     .file(pingInfo.sfx)
