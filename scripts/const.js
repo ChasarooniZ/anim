@@ -1,40 +1,43 @@
 export const MODULE_ID = "anim";
+const BASE_ASSET_PATH = "modules/anim/assets";
+const PING_ART_PATH = `${BASE_ASSET_PATH}/art/pings/`;
+const PING_SFX_PATH = `${BASE_ASSET_PATH}/sfx/pings/`;
 export const PINGS = {
   "assist-me": {
-    icon: "modules/anim/assets/art/pings/assist-me.svg",
+    icon: `${PING_SFX_PATH}assist-me.svg`,
     anchor: { x: 0.5, y: 1 },
-    sfx: "graphics-sfx.crafting.metal.alert.01",
+    sfx: `${PING_SFX_PATH}steampunk-spring-song-b.ogg`,
   },
   danger: {
-    icon: "modules/anim/assets/art/pings/danger.svg",
+    icon: `${PING_SFX_PATH}danger.svg`,
     anchor: 0.5,
-    sfx: "graphics-sfx.crafting.misc.ui.alert.03",
+    sfx: `${PING_SFX_PATH}perc-warning-a.ogg`,
   },
   default: {
-    icon: "modules/anim/assets/art/pings/default.svg",
+    icon: `${PING_SFX_PATH}default.svg`,
     anchor: { x: 0.5, y: 1 },
-    sfx: "graphics-sfx.crafting.misc.ui.alert.04.01",
+    sfx: `${PING_SFX_PATH}aggressive-twinkle.ogg`,
   },
   investigate: {
-    icon: "modules/anim/assets/art/pings/investigate.svg",
+    icon: `${PING_SFX_PATH}investigate.svg`,
     anchor: { x: 0.95, y: 0.65 },
-    sfx: "graphics-sfx.crafting.metal.alert.01",
+    sfx: `${PING_SFX_PATH}bells-magic-box-c.ogg`,
   },
   "on-my-way": {
-    icon: "modules/anim/assets/art/pings/on-my-way.svg",
+    icon: `${BASE_ASSET_PATH}on-my-way.svg`,
     anchor: { x: 0.5, y: 1 },
-    sfx: "graphics-sfx.crafting.metal.alert.01",
+    sfx: `${PING_SFX_PATH}unholy-ui-souls-14.ogg`,
   },
   question: {
-    icon: "modules/anim/assets/art/pings/question.svg",
+    icon: `${PING_SFX_PATH}question.svg`,
     anchor: { x: 0.5, y: 1 },
-    sfx: "graphics-sfx.crafting.metal.alert.01",
+    sfx: `${PING_SFX_PATH}question-temp.ogg`,
   },
 };
 
 export const DEFAULT_PINGS = [
   "danger",
-  "assist-me",
+  "investigate",
   "question",
   "on-my-way",
 ].map((id) => ({ id, icon: PINGS[id].icon }));
