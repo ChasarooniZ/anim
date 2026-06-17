@@ -24,7 +24,7 @@ export const PINGS = {
     sfx: `${PING_SFX_PATH}bells-magic-box-c.ogg`,
   },
   "on-my-way": {
-    icon: `${BASE_ASSET_PATH}on-my-way.svg`,
+    icon: `${PING_ART_PATH}on-my-way.svg`,
     anchor: { x: 0.5, y: 1 },
     sfx: `${PING_SFX_PATH}unholy-ui-souls-14.ogg`,
   },

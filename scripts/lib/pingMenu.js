@@ -14,6 +14,8 @@ export function openPingMenu(pings = DEFAULT_PINGS) {
   const mousePos = canvas.mousePosition;
   const screenPos = canvas.stage.worldTransform.apply(mousePos);
 
+  window.animPingPosition = screenPos;
+
   const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}">
   <g transform="translate(${center},${center}) rotate(45) translate(-${center},-${center})">
@@ -105,7 +107,7 @@ export function handlePingSelection() {
 }
 
 function pingAnimation(type) {
-  const mousePos = canvas.mousePosition;
+  const position = window.animPingPosition;
   const name = `ping-${game.user.id}`;
 
   const pingInfo = PINGS[type];
@@ -122,7 +124,7 @@ function pingAnimation(type) {
     .file(pingInfo.icon)
     .anchor(pingInfo.anchor)
     .name(name)
-    .atLocation(mousePos)
+    .atLocation(position)
     .duration(3000)
     .fadeIn(500, { ease: "easeOutQuart" })
     .scaleIn(0.5, 500, { ease: "easeOutQuad" })
@@ -136,7 +138,7 @@ function pingAnimation(type) {
     .volume(volume)
     .alwaysForGMs()
     .radius(audioDistance)
-    .atLocation(mousePos)
+    .atLocation(position)
     .distanceEasing()
     .play();
 }
