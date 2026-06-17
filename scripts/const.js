@@ -4,22 +4,22 @@ const PING_ART_PATH = `${BASE_ASSET_PATH}/art/pings/`;
 const PING_SFX_PATH = `${BASE_ASSET_PATH}/sfx/pings/`;
 export const PINGS = {
   "assist-me": {
-    icon: `${PING_SFX_PATH}assist-me.svg`,
+    icon: `${PING_ART_PATH}assist-me.svg`,
     anchor: { x: 0.5, y: 1 },
     sfx: `${PING_SFX_PATH}steampunk-spring-song-b.ogg`,
   },
   danger: {
-    icon: `${PING_SFX_PATH}danger.svg`,
+    icon: `${PING_ART_PATH}danger.svg`,
     anchor: 0.5,
     sfx: `${PING_SFX_PATH}perc-warning-a.ogg`,
   },
   default: {
-    icon: `${PING_SFX_PATH}default.svg`,
+    icon: `${PING_ART_PATH}default.svg`,
     anchor: { x: 0.5, y: 1 },
     sfx: `${PING_SFX_PATH}aggressive-twinkle.ogg`,
   },
   investigate: {
-    icon: `${PING_SFX_PATH}investigate.svg`,
+    icon: `${PING_ART_PATH}investigate.svg`,
     anchor: { x: 0.95, y: 0.65 },
     sfx: `${PING_SFX_PATH}bells-magic-box-c.ogg`,
   },
@@ -29,7 +29,7 @@ export const PINGS = {
     sfx: `${PING_SFX_PATH}unholy-ui-souls-14.ogg`,
   },
   question: {
-    icon: `${PING_SFX_PATH}question.svg`,
+    icon: `${PING_ART_PATH}question.svg`,
     anchor: { x: 0.5, y: 1 },
     sfx: `${PING_SFX_PATH}question-temp.ogg`,
   },
