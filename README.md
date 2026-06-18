@@ -1,4 +1,4 @@
-[![module_banner](https://github.com/ChasarooniZ/pf2e-usage-updater/assets/79132112/3b2a4f8c-7ba1-4647-b073-d8ecac9d93a6)](https://github.com/ChasarooniZ)
+[ ![module_banner](https://github.com/ChasarooniZ/pf2e-usage-updater/assets/79132112/3b2a4f8c-7ba1-4647-b073-d8ecac9d93a6)](https://github.com/ChasarooniZ)
 
 ![](https://img.shields.io/badge/Foundry-v14-informational)
 ![All Downloads](https://img.shields.io/github/downloads/ChasarooniZ/anim/total?color=5e0000&label=All%20Downloads)
