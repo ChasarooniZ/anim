@@ -16,10 +16,11 @@ Just some misc agnostic animations
   - [Features](#features)
   - [Changelog](#changelog)
   - [Contributors](#contributors)
+  - [Licensing](#licensing)
 
 ## Features
 
-- Pings - Adds a radial menu so you can "help direct teammates" like in your favorite MOBA
+- **Pings** - Adds a radial menu so you can "help direct teammates" like in your favorite MOBA
 
 ## Changelog
 
@@ -28,3 +29,8 @@ You can access the changelog [here](/CHANGELOG.md).
 ## Contributors
 
 You can see everyone else who contributed to the module [here](CONTRIBUTORS.md)
+
+## Licensing
+
+- Many of the ping sounds were licensed from `Ovani Sounds` under a Royalty Free license
+- Some sounds such as `Unholy UI Souls (14)` were licensed from `Tatlier Magicae` from their UI packs under a Royalty Free License
