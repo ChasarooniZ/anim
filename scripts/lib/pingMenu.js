@@ -112,7 +112,7 @@ function pingAnimation(type) {
   const pingInfo = PINGS[type];
 
   Sequencer.EffectManager.endEffects({ name: name });
-  const volume = game.settings.get("core", "globalSoundEffectVolume");
+  const volume = 0.5; //game.settings.get("core", "globalSoundEffectVolume");
   const audioDistance =
     ((canvas.scene.width + canvas.scene.height) / 2 / canvas.grid.size) *
     canvas.grid.distance;
